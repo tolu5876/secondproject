@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+   <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .body{
+       font-family: 'Poppins', sans-serif;
+       color: #555;
+    background-color: #f7f9fc;
+    }
+    .left{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        color: white;
+        background-color: black;
+        cursor: pointer;
+           padding: 10px 0; 
+    border-bottom: 1px solid #cce5ff;
+    font-size: 0.85rem;
+      
+    } 
+    .icon{ 
+     display: block;
+     margin: 10px 0;
+    }
+    .fa-brands{
+       color: white;
+       
+    }
+    .login{
+      margin-left: 200px;
+      background-color: blue;
+      width: 200px;
+      height: 30px;
+      cursor: pointer;
+    }
+    .login h3{
+      text-align: center;
+      padding: 5px 0px;
+      border-bottom-left-radius: 300px;
+    }
+    .wrapper{
+       align-items: center;
+       display: flex;
+       gap: 40px;
+       background-color:whitesmoke;
+         padding: 15px 0;
+       
+    }
+    .edura-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  padding: 10px 15px; 
+  background-color: #007bff; 
+  color: white;
+  border-radius: 8px; 
+   border: none;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.edura-logo img {
+  height: 50px; 
+}
+.wrap-links{
+ display: flex;
+        align-items: center;
+          gap: 40px;       
+} 
+
+a{
+  text-decoration: none;
+  gap: 300px;
+   font-weight: 600;
+}
+a:hover{
+  color: #007bff;
+}
+.us{
+  background-color: #007bff;
+  color: white;
+  height: 40px;
+  width: 10%;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  /* padding: 10px 20px; */
+    font-weight: 600;
+}
+.fa-solid{
+  
+}
+.all{
+   margin-left: 80px;
+       margin-top: 100px; 
+        background-image: url(book.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    padding: 150px 50px; 
+    position: relative;
+    top: -100px;
+    left: -80px;
+    overflow: hidden;
+    width: 100%;
+    
+       
+}
+.fa-arrow-right-lon{
+  color: black;
+}
+.main{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.main h1{
+     color: #007bff;
+}
+
+ ul{
+         display:flex ; 
+       list-style-type: none;
+        gap: 5px;
+        margin-top: 20px;
+    }
+    
+    .cta-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+
+.up {
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.2s;
+     background-color: #007bff;
+     color: white;
+     border: none;
+}
+
+
+.down{
+  padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.2s;
+     background-color: #225222;
+     color: white;
+     border: none;
+     cursor: pointer;
+}
+
+
+.hero-image-block img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    z-index: 5;
+}
+
+.hero-image-block::before{
+    /* content: ''; */
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.data-point {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    text-align: center;
+    z-index: 10;
+}
+
+.data-point.student-count {
+    bottom: 20px;
+    right: 350px;
+}
+
+.data-point.course-count {
+    top: 20px;
+  right: 50px;
+    background-color: var(--sub-heading-color);
+    color: white;
+}
+
+.data-point.course-count .data-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.data-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.data-icon .fas {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.data-point .number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.data-point .label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.integrity{
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+         position: relative;
+        top: -80px; 
+        justify-content: center;
+        align-items: center;
+        margin-left: 150px;
+        color: green;
+    }
+    .about{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(17rem, auto)); 
+     gap: 2.5rem; 
+}
+
+.about-img img{
+     border-radius: 0.5rem;
+     width: 300px;
+     height: 200px;
+} 
+.earth img{
+  width: 200px;
+  position: absolute;
+  top: 780px;left: 200px;
+}
+
+.about-text h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.about-text p{
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.1rem;
+} 
+.Learn{
+  background-color: rgb(39, 39, 122);
+  height: 3rem;
+  width: 10rem;
+  cursor: pointer;
+  border: none;
+}
+.popular-courses {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.popular-courses-header p {
+  font-size: 14px;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.popular-courses-header h2 {
+  font-size: 36px;
+  color: #333;
+}
+
+.course-cards-container {
+  display: flex; 
+  justify-content: center;
+  gap: 20px; 
+  margin-top: 40px;
+}
+
+.course-card {
+  background-color: wheat;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  text-align: center;
+  height: 110px;
+}
+.course-card:hover{
+      background-color: blue;
+      }
+
+.course-card.active {
+  background-color: #007bff; /* The blue active card color */
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+}
+
+
+
+.course-card.active .card-icon {
+  background-color: #fff;
+}
+
+.course-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.course-card p {
+  font-size: 14px;
+  color: #888;
+}
+
+.course-card.active p {
+  color: #fff; /* White text for the active card */
+}
+.class{
+  background-color:#85b9f0 ;
+}
+ .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .image-placeholder {
+             height: 150px; 
+            background-color: #e0e0e0;
+            position: relative;
+        }
+        .image-placeholder img{
+          height: 150px;
+          width: 400px;
+        }
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff4d4f;
+             color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold; 
+        }
+        .content {
+            padding: 20px;
+        }
+        .rating {
+            color: #ffc107;
+            font-size: 14px;
+            margin-bottom: 10px;
+            margin-right: 140px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .details {
+            display: flex;
+            justify-content: space-around;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        .details span {
+            display: block;
+        }
+        .details strong {
+            display: block;
+            font-size: 16px;
+            color: #000;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-top: 1px solid #eee;
+            background-color: #fafafa;
+        }
+        .instructor {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #666;
+        }
+        .avatar {
+            width: 30px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+         .avatar img{
+          width: 30px;
+          border-radius: 50%;
+         }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        .free {
+            color: red;
+          
+        }
+        .view-all {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .view-all a {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .view-all a:hover {
+            background-color: #0056b3;
+        }
+        @media  (max-width:1058px){
+          .project{
+            margin: 0;
+            height: 30px;
+          }
+     .left{
+       width: 2000px;
+       gap: 4px;
+       justify-content: space-between;
+    }
+    .login{
+      margin-left: 20px;
+      background-color: blue;
+      width: 200px;
+      height: 30px;
+      cursor: pointer;
+    }
+    .edura-logo{
+        width: 170px;
+    }
+    .edura-logo img{
+      align-items: center;
+    }
+
+    .wrapper{
+ display: flex;
+        align-items: center;
+          gap: 200px;
+          background-color: #000;  
+          width: 2000px;     
+}
+    a{
+  text-decoration: none;
+  /* gap: 300px; */
+   font-weight: 600;
+   color: #007bff;
+}
+.us{
+    background-color: #007bff;
+  color: white;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  
+    font-weight: 600;
+}
+    
+    .search{
+      margin-top: 20px;  
+    }
+    .all{
+   margin-left: 80px;
+       margin-top: 100px; 
+        background-image: url(book.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    padding: 150px 50px; 
+    position: relative;
+    top: -100px;
+    left: -80px;
+    overflow: hidden;
+    width: 430%;
+}
+.integrity{
+        list-style-type: none;
+        display: flex;
+        gap: 200px;
+         position: relative;
+        top: -80px; 
+        justify-content: center;
+        align-items: center;
+        margin-left: 850px;
+        color: green;
+    }
+    .about{
+      width: 2000px;
+     
+    
+    }
+    .about-text{
+      margin-top: 40px;
+    }
+    .about img{
+       border-radius: 0.5rem;
+     width: 500px;
+     height: 300px;
+    }
+    .earth img{
+  width: 500px;
+  position: absolute;
+  top: 940px;left: 300px;
+}
+.class{
+  width: 2000px;
+  margin-top: 80px;
+}
+  }
+   </style>
+</head>
+<body>
+  
+ <div class="left">
+      <span>📞 07072161185</span>
+      <span>toluwalaseakanbigiwa44@gmail.com</span>
+      <span>🕒 Mon - Sat: 8:00 - 2:00</span>
+    <div class="icon">
+      <span>follow Us:</span> <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+    <div class="login">
+      <h3>Login/Register</h3>
+    </div>
+  </div>
+</button>
+          <div class="wrapper">
+        <div class="nav">
+        <button class="edura-logo">
+  <img src="clever-fox-logo-01-273.webp" alt="Edura Logo">
+  <span>EDURA</span>
+</button>
+</div>
+        <div class="wrap-links">
+        <a href="#HOME">HOME</a>
+        <a href="#COURSES">COURSES</a>
+         <a href="#Products">TECHERS</a>
+         <a href="#PAGES">PAGES</a>
+         <a href="#BLOG">BLOG</a>
+         <a href="#contact">Contact</a> 
+         </div>
+        <div class="search">
+         <input type="search"  id= "search-box" placeholder="Search For Courses.........">
+         <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
+         </div>
+          <div class="fa-solid fa-heart"></div>
+         <div class="fa-solid fa-cart-shopping"></div>
+         
+          
+         <button class="us">CONTACT US<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        </div>
+        <!-- header section -->
+         <main class="all">
+           <div class="main">
+                <h6><i class="fa-solid fa-arrow-right-long"></i>ONLINE E-LARNING COURSE</h6>
+                <h1><b>Online Education</b></h1>
+                <h2><b>Feels Like Real Classroom</b></h2>
+         </div>
+         <ul>
+               <i class="fa-solid fa-circle-check"></i> <span>Get Certified</span>
+                <i class="fa-solid fa-circle-check"></i><span>Gain job-ready Skills</span>
+                <i class="fa-solid fa-circle-check"></i><span></span>Great Life</span>
+                </ul>
+                <div class="cta-buttons">
+                  <button class="up"> GET STARTED<i class="fas fa-arrow-right"></i></button>
+                    <button class="down">OUR COURSES<i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="hero-image-block">
+                <div class="data-point student-count">
+                    <div class="data-icon"><i class="fas fa-user-friends"></i></div>
+                    <span class="number">16500+</span>
+                    <span class="label">Active Students</span>
+                </div>
+                <div class="data-point course-count">
+                    <div class="data-icon"><i class="fas fa-book"></i></div>
+                    <span class="number">7500+</span>
+                    <span class="label">Online Video Courses</span>
+                </div>
+            </div>
+         </main>
+          <div class="integrity">
+            <li><i class="fa-solid fa-graduation-cap "></i>20k+Online Courses</li>
+            <li><i class="fa-solid fa-lock-open"></i>Lifetime Access</li>
+            <li><i class="fa-solid fa-sack-dollar"></i>Value for Money</li>
+            <li><i class="fa-solid fa-headset"></i>Lifetime Support</li>
+            <li><i class="fa-solid fa-people-line"></i>Community Suppart</li>
+         </div>
+          
+ <section class="about" id="about">
+        <div class="about-img">
+            <img src="laptop.jpg" alt="">
+            <div class="earth">
+            <img src="persin.jpg" alt="">
+            </div>
+        </div>
+        <div class="about-text">
+            <h2>Dive into our Online Course<br>and Ignite Your Learning</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam, autem quasi <br>obcaecati, dolorem quisquam sed natus voluptas, ex sunt provident voluptatum eveniet esse optio! Magnam<br> officiis vero dolor similique.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque reprehenderit fugiat <br> quaerat quae illum. Tenetur eos vitae ullam! Et exercitationem minima accusamus totam,<br> officia necessitatibus sint pariatur sapiente vitae assumenda.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit saepe iure reprehenderit libero <br>dolorem laborum, labore tempora facere, eaque molestiae quae nam dicta. In similique<br> maxime ducimus quibusdam architecto repudiandae!</p>
+            <button class="Learn">Learn More</button>
+        </div>
+      </section>
+      <section class="class">
+      <section class="popular-courses">
+  <div class="popular-courses-header">
+    <p>Popular Courses</p>
+    <h2>Our Popular Online Courses</h2>
+  </div>
+  <div class="course-cards-container">
+    <div class="course-card">
+      <div class="card-icon">
+        </div>
+      <div class="card-content">
+        <i class="fa-solid fa-people-line"></i>
+        <h3>Digital Marketing</h3>
+        <p>286 Courses</p>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-icon">
+        </div>
+      <div class="card-content">
+        <i class="fa-solid fa-people-line"></i>
+        <h3>UI/UX Design</h3>
+        <p>140 Courses</p>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-icon">
+        </div>
+      <div class="card-content">
+        <i class="fa-solid fa-people-line"></i>
+        <h3>Graphic Design</h3>
+        <p>245 Courses</p>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="card-icon">
+        </div>
+      <div class="card-content">
+        <i class="fa-solid fa-people-line"></i>
+        <h3>Web Development</h3>
+        <p>206 Courses</p>
+      </div>
+    </div>
+  </div>
+      </section>
+      <div class="container">
+        <div class="card">
+            <div class="image-placeholder">
+              <img src="earth.jpg" alt="">
+                <div class="badge">03 WEEKS</div>
+            </div>
+            <div class="content">
+                <div class="rating">
+                    <span>★★★★☆</span> (4.7)
+                </div>
+                <div class="title">Learn Figma - UI/UX Design Essential Training</div>
+                <div class="details">
+                    <span>Lessons<br><strong>8</strong></span>
+                    <span>Students<br><strong>20k+</strong></span>
+                    <span>Registrer<br><strong>+</strong></span>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="instructor">
+                    <div class="avatar"><img src="sexy.jpg" alt=""></div>
+                    <span>Kevin Perry</span>
+                </div>
+                <div class="price free">FREE</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-placeholder">
+              <img src="earth.jpg" alt="">
+                <div class="badge">02 WEEKS</div>
+            </div>
+            <div class="content">
+                <div class="rating">
+                    <span>★★★★☆</span> (4.7)
+                </div>
+                <div class="title">Education Software and PHP and JS System Script</div>
+                <div class="details">
+                    <span>Lessons<br><strong>8</strong></span>
+                    <span>Students<br><strong>30k+</strong></span>
+                    <span>Registrer<br><strong>+</strong></span>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="instructor">
+                    <div class="avatar"><img src="sexy.jpg" alt=""></div>
+                    <span>Max Alexis</span>
+                </div>
+                <div class="price free">FREE</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-placeholder">
+              <img src="earth.jpg" alt="">
+                <div class="badge">04 WEEKS</div>
+            </div>
+            <div class="content">
+                <div class="rating">
+                    <span>★★★★☆</span> (4.7)
+                </div>
+                <div class="title">IT Statistics Data Science and Business Analysis</div>
+                <div class="details">
+                    <span>Lessons<br><strong>7</strong></span>
+                    <span>Students<br><strong>20k+</strong></span>
+                    <span>Registrer<br><strong>+</strong></span>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="instructor">
+                    <div class="avatar"><img src="sexy.jpg" alt=""></div>
+                    <span>Kevin Perry</span>
+                </div>
+                <div class="price free">FREE</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-placeholder">
+              <img src="earth.jpg" alt="">
+                <div class="badge">03 WEEKS</div>
+            </div>
+            <div class="content">
+                <div class="rating">
+                    <span>★★★★☆</span> (4.7)
+                </div>
+                <div class="title">Advanced Android 12 & Kotlin Development Course</div>
+                <div class="details">
+                    <span>Lessons<br><strong>10</strong></span>
+                    <span>Students<br><strong>20k+</strong></span>
+                    <span>Registrer<br><strong>+</strong></span>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="instructor">
+                    <div class="avatar"><img src="sexy.jpg" alt=""></div>
+                    <span>Max Alexis</span>
+                </div>
+                <div class="price free">FREE</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="view-all">
+        <a href="#">VIEW ALL COURSES →</a>
+    </div>
+    </section>
+</body>
+</html>
