@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #073e3a;
+    }
+    .container {
+        width: 450px;
+        background: #032e2e;
+        padding: 20px;
+        margin: 30px auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        height: 300px;
+    }
+    h2 {
+        text-align: center;
+    }
+    label {
+        display: inline-block;
+        width: 150px;
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="messages"],input[type="password"]{
+        width: 230px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .error {
+        color: rgb(255, 0, 0);
+        font-size: 0.85em;
+        display: none;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+     button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+    } 
+    button:hover {
+        background-color: #357ae8;
+    }
+    .btn{
+        text-align: center;
+        font-weight: 700;
+    }
+    .btn span{
+        color: red;
+        cursor: pointer;
+    }
+
+   
+   </style>
+</head>
+<body>
+    <!-- <div class="container">
+    <h2>Login FORM</h2>
+    <form id="registrationForm">
+        <div class="form-group">
+            <form action="">
+            <label>User Name</label>
+            <input type="text" id="UserName">
+            <div class="error" id="UserNameError">First Name is required</div>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email">
+            <div class="error" id="emailError">Email ID is required</div>
+        </div>
+
+        <div class="form-group">
+            <label>password</label>
+            <input type="password" id="password">
+            <div class="error" id="passworderror">messages is required</div>
+        </div>
+        <button type="submit">Login</button>
+        <div class="btn">
+        <h4>Don't have and account?<span>Signup now</span></h4>
+        </div>
+    </form>
+</form> -->
+<form action="submit.php" method="post">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  
+  <button type="submit">Submit</button>
+</form>
+    
+
+</body>
+</html>
